@@ -84,35 +84,19 @@ pip install psycopg2
 🔧 Criar banco de dados  
 CREATE DATABASE biblioteca;  
 
-🔧 Criar usuário (opcional)  
-CREATE USER biblioteca_user WITH PASSWORD 'senha123';  
-GRANT ALL PRIVILEGES ON DATABASE biblioteca TO biblioteca_user;  
-
-🔧 Criar as tabelas  
-CREATE TABLE autor (  
-    id SERIAL PRIMARY KEY,  
-    nome VARCHAR(150) NOT NULL,  
-    nacionalidade VARCHAR(100) NOT NULL  
+🔧 CREATE TABLE Autor (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    nacionalidade VARCHAR(50)
 );
 
-CREATE TABLE livro (  
-    id SERIAL PRIMARY KEY,  
-    titulo VARCHAR(200) NOT NULL,  
-    ano_publicacao INT NOT NULL,  
-    id_autor INTEGER NOT NULL REFERENCES autor(id)  
+CREATE TABLE Livro (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(200) NOT NULL,
+    ano_publicacao INTEGER,
+    autor_id INTEGER NOT NULL,
+    FOREIGN KEY (autor_id) REFERENCES Autor(id) ON DELETE CASCADE
 );
-
-## ⚙ Arquivo de Conexão
-
-Edite models/conexao.py conforme seu ambiente:
-
-DB_CONFIG = {  
-    "host": "localhost",  
-    "port": 5432,  
-    "dbname": "biblioteca",  
-    "user": "biblioteca_user",  
-    "password": "senha123"  
-}
 
 ## ▶ Como Executar
 
