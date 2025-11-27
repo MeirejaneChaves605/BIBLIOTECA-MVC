@@ -21,8 +21,6 @@
 - [⚙ Arquivo de Conexão](#-arquivo-de-conexão)
 - [▶ Como Executar](#-como-executar)
 - [📂 Estrutura do Projeto](#-estrutura-do-projeto)
-- [🙋‍♀️ Contribuição](#-contribuição)
-- [📜 Licença](#-licença)
 
 ---
 
@@ -59,8 +57,8 @@ Git (opcional)
 ## 📥 Instalação do Projeto
 
 1️⃣ Clone o repositório
-git clone https://github.com/natallymorais/Sistema-de-Biblioteca-Universit-ria.git
-cd Sistema-de-Biblioteca-Universit-ria
+https://github.com/MeirejaneChaves605/BIBLIOTECA-MVC.git
+cd BIBLIOTECA-MVC
 
 2️⃣ Crie o ambiente virtual (opcional)
 python -m venv venv
